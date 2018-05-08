@@ -9,10 +9,9 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Marcel",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.2.0",
     "gulp": "^3.9.1"
   },
   "devDependencies": {
