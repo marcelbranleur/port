@@ -1,6 +1,18 @@
-$(document).ready(function() {
 
-  
+
+
+(function($) {
+  $(function() {
+    $('.btn-toggler').click(function() {
+       $('.btn-toggler').toggleClass('bt-menu-open');
+       $('.aside').toggleClass('active');
+    });
+    $('.nav__item').click(function() {
+      $('.btn-toggler').toggleClass('bt-menu-open');
+      $('.aside').toggleClass('active');
+    });
+  });
+})(jQuery);
 
 
 
@@ -26,7 +38,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1500, function() {
+        }, 1000, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -41,17 +53,3 @@ $('a[href*="#"]')
       }
     }
   });
-
-  //Animation on scroll - AOS
-
-  AOS.init();
-  AOS.init({
-    offset: 000,
-    duration: 800,
-    easing: 'ease-in-sine',
-    delay: 300,
-    disable: 'mobile',
-  });
-
-  
-});
